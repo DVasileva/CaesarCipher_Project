@@ -14,33 +14,34 @@
 		<h1>Caesar's Cipher</h1>
 	
 			<label for="original">Enter your message</label>
-				<input id="original" type="text" value="">
+				<input id="original" type="text" value="pizza">
 
 		
-			<label for="amount">Shift</label>
-				<input id="amount" type="number" value="0">
+			<label for="offset">Shift</label>
+				<input id="offset" type="number" value="0">
 		<hr>
 
 			<label for="cipher">Encrypted message</label>
 				<input  id="cipher" type="text" value="" readonly>
 
-		
-
 	</div>
-
-	
 </form>
 
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+		let originalMsg = 'abcdefg';
+		let shift = 1;
+
+		function Encrypt(){
+			console.log('it works')
+		}
+		Encrypt();
 
 
+		
+	</script>
 
-
-
-
-
-
-
-</script>
 
 
 	
