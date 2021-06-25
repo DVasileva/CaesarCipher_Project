@@ -1,18 +1,20 @@
 body{
-	background-image: url(../img/alphabet.jpg);
+	background-image: url(../img/alphabet.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover ;
 	}
 h1{
 	color: #849BB2;
 	padding: 20px;
-  	margin-top: 0px;
-    font-family: "Lucida Console", "Courier New", monospace;
+  margin-top: 0px;
+  font-family: "Lucida Console", "Courier New", monospace;
 
 }
 
 label{
 	margin: 20px;
-    color: #849BB2;
-    font-family: "Lucida Console", "Courier New", monospace;
+  color: #849BB2;
+  font-family: "Lucida Console", "Courier New", monospace;
 
 }
 input[type=text] {
@@ -27,12 +29,17 @@ input[type=number]{
 	opacity: 0.5;
 	
 }
- .mainContainer {
-      max-width: 1000px;
-      margin:  auto;
 
-    }
-  hr {
-      border: 1px solid black;
-      margin: 50px 0px;
-    }
+hr {
+  border: 1px solid black;
+  margin: 50px 0px;
+}
+
+img {
+ opacity: 0.5;
+ position: absolute;
+ right: 0px;
+bottom: 0px;
+width: 10%;
+height: auto;
+}
