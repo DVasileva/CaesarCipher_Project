@@ -1,0 +1,38 @@
+body{
+	background-image: url(../img/alphabet.jpg);
+	}
+h1{
+	color: #849BB2;
+	padding: 20px;
+  	margin-top: 0px;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+label{
+	margin: 20px;
+    color: #849BB2;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  opacity: 0.5;
+ 
+}
+input[type=number]{
+	opacity: 0.5;
+	
+}
+ .mainContainer {
+      max-width: 1000px;
+      margin:  auto;
+
+    }
+  hr {
+      border: 1px solid black;
+      margin: 50px 0px;
+    }
