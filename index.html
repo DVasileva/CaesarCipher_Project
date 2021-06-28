@@ -13,7 +13,7 @@
 		<h1>Caesar's Cipher</h1>
 	
 			<label for="original">Enter your message</label>
-				<input id="original" type="text" value="pizza">
+				<input id="original" type="text" value="">
 
 		
 			<label for="offset">Shift</label>
@@ -35,10 +35,20 @@
 		// let originalMsg = 'abcdefg';
 		// let shift = 1;
 
-		var alphbet = 'abcdefghijklmnopqrstuvwxyz';
-		full = alphbet+alphbet+alphbet;
+		//get the input data
+		let inputMsg = $('#original').val();
+		let inputShift = $('#shift').val();
+		let inputCipher = $('#cipher').val();
 
+		console.log(inputMsg);
 		
+
+
+//other option
+		// var alphbet = 'abcdefghijklmnopqrstuvwxyz';
+		// full = alphbet+alphbet+alphbet;
+
+
 
 		function Encrypt(){
 			//console.log('it works')
