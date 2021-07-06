@@ -1,27 +1,32 @@
-	 let originalMsg = 'abcdefg';
-	 	let shift = 1;
-
-		//get the input data
-		let inputMsg = $('#original').val();
-		let inputShift = $('#offset').val();
-		let inputCipher = $('#cipher').val();
-
-		inputMsg.addEventListener('input', enteredLetter)
-
-			function (enteredLetter){
-				
-			}
-
-
-//other option ???
+	 //other option ???
 		// var alphbet = 'abcdefghijklmnopqrstuvwxyz';
 		// full = alphbet+alphbet+alphbet;
 
+	 	let shift = 1;
+
+		//get the input data
+		let inputMsg = document.querySelector('#original');//$('#original').val();
+		let inputShift = document.querySelector('#offset');//$('#offset').val();
+		let inputCipher = document.querySelector('#cipher');//$('#cipher').val();
+
+		let originalMsg = inputMsg.value;
+
+		inputMsg.addEventListener('input', enteredLetter, false)
+
+			function enteredLetter (e){
+				originalMsg = e.target.value; // ?-> $(this)
+				originalMsg = originalMsg.toLowerCase();
+				originalMsg = originalMsg.replace(/[^a-z]/, '');
+
+				e.target.value = originalMsg;
+				Encrypt();
+
+			}
 
 
 		function Encrypt(){
-			console.log('it works');
-			let encryptMsg = '';
+			//console.log('it works');
+		let encryptMsg = '';
 
 		 for (letter of originalMsg){
 
@@ -52,4 +57,3 @@
 
 		}
 
-//$(this) = e.target
