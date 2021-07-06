@@ -29,58 +29,8 @@
 		<img src="img/cipher_template.jpg">
 	</a>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-
-		// let originalMsg = 'abcdefg';
-		// let shift = 1;
-
-		//get the input data
-		let inputMsg = $('#original').val();
-		let inputShift = $('#offset').val();
-		let inputCipher = $('#cipher').val();
-
-
-//other option ???
-		// var alphbet = 'abcdefghijklmnopqrstuvwxyz';
-		// full = alphbet+alphbet+alphbet;
-
-
-
-		function Encrypt(){
-			//console.log('it works')
-			let encryptMsg = '';
-
-		for (letter of originalMsg){
-
-			encryptMsg += letterShift(letter, shift);
-		}
-		console.log(encryptMsg)
-		}
-		Encrypt();
-
-		function letterShift(letter,shift){
-			let newLetter = '';
-			//return the unicode of a character
-			let letterCode = letter.charCodeAt(0);
-			let newLetterCode = letterCode + shift;
-
-			if (newLetterCode < 97) {
-				newLetterCode += 26;
-
-			}else if (newLetterCode > 122){
-				newLetterCode -= 26;
-
-			}
-			//converts the unicode into a character
-			newLetter = String.fromCharCode(newLetterCode); 
-			return newLetter
-
-		}
-
-
-		
-	</script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
 
 
