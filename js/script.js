@@ -2,10 +2,9 @@
 		// var alphbet = 'abcdefghijklmnopqrstuvwxyz';
 		// full = alphbet+alphbet+alphbet;
 
-	 	let shift = 1;
 
 		//get the input data
-		let inputMsg = document.querySelector('#original');//$('#original').val();
+		let inputMsg = $('#original')[0];
 		let inputShift = document.querySelector('#offset');//$('#offset').val();
 		let inputCipher = document.querySelector('#cipher');//$('#cipher').val();
 
@@ -16,7 +15,7 @@
 			function enteredLetter (e){
 				originalMsg = e.target.value; // ?-> $(this)
 				originalMsg = originalMsg.toLowerCase();
-				originalMsg = originalMsg.replace(/[^a-z]/, '');
+				originalMsg = originalMsg.replace( /[^a-z\s]/, '' );
 
 				e.target.value = originalMsg;
 				Encrypt();
@@ -27,12 +26,16 @@
 		function Encrypt(){
 			//console.log('it works');
 		let encryptMsg = '';
+		let shift = inputShift.value ? Number(inputShift.value) : 0;
+  		console.log(shift);
 
 		 for (letter of originalMsg){
 
 		 	encryptMsg += letterShift(letter, shift);
 		 }
 		 console.log(encryptMsg)
+
+		 inputCipher.value = encryptMsg;
 		 }
 		 Encrypt();
 
