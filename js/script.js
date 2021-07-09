@@ -13,11 +13,15 @@
 			for ( i = 0; i < inputMsg.length; i ++ ){
 				var currentLetter = inputMsg[i];
 				var upperCase = (currentLetter == currentLetter.toUpperCase());
+				//console.log(upperCase);
 				letter = currentLetter.toLowerCase();
 
+
 				var ind = letters.indexOf(currentLetter); //-> returns index at an element can be found 
+
 					if(ind == -1 ){
-						encryptMsg += currentLetter;		
+						encryptMsg += currentLetter;
+							//console.log(encryptMsg);
 					} else {
 						ind = ((ind + inputShift) + letters.length);
 
