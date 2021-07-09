@@ -3,7 +3,7 @@
 		allLet = letters + letters + letters;
 
 
-		//function encrypt(){
+		function encrypt(){
 			var inputMsg = $('#original').val();
 			var inputShift = $('#offset').val();
 
@@ -11,19 +11,28 @@
 			var encryptMsg = '';
 
 			for ( i = 0; i < inputMsg.length; i ++ ){
-				var letter = inputMsg[i];
-				var upperCase = (letter == letter.toUpperCase());
-				letter = letter.toLowerCase();
+				var currentLetter = inputMsg[i];
+				var upperCase = (currentLetter == currentLetter.toUpperCase());
+				letter = currentLetter.toLowerCase();
 
-				var ind = letters.indexOf(letter);
-					if(ind == 0 ){
-						encryptMsg += ind
+				var ind = letters.indexOf(currentLetter); //-> returns index at an element can be found 
+					if(ind == -1 ){
+						encryptMsg += currentLetter;		
+					} else {
+						ind = ((ind + inputShift) + letters.length);
+
+						 var newLetter = allLet[ind];
+						 if(upperCase)
+						 	newLetter = newLetter.toUpperCase();
+						 		encryptMsg += newLetter;
+
 					}
 
 			}
+			$('#cipher').val(encryptMsg);
 
-		//}
-
+		}
+			encrypt();
 
 		// //get the input data
 		// let inputMsg = $('#original')[0];
