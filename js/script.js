@@ -24,8 +24,12 @@ var letters = 'абвгдежзийклмнопрстуфхцчшщъьюя';
 						
 					} else {
 						ind = ((ind + inputShift) + letters.length);
-						console.log(ind);
-						
+						//console.log(ind);
+						  var newLetter = allLet[ind];
+						 if(upperCase)
+						 	newLetter = newLetter.toUpperCase();
+						  		encryptMsg += newLetter;
+
 					}
 
 			}
