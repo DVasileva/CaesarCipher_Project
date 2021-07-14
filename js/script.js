@@ -1,5 +1,4 @@
 var letters = 'абвгдежзийклмнопрстуфхцчшщъьюя';
-allLet = letters + letters + letters;
 
 function encrypt(){
 var inputMsg = $('#original').val();
@@ -25,6 +24,8 @@ currentLetter = currentLetter.toLowerCase();
 					
 						ind = ((ind + inputShift) + letters.length);
 				//console.log(ind);
+
+				var allLet = letters + letters + letters;
 				var newLetter = allLet[ind];
 				if(upperCase)
 					newLetter = newLetter.toUpperCase();
